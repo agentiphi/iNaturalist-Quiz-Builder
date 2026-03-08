@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../data/locale_data.dart';
 import '../models/quiz_question.dart' show QuizType;
@@ -148,6 +149,17 @@ class SettingsScreen extends ConsumerWidget {
             secondary: const Icon(Icons.swipe),
             value: settings.photoSwipeHints,
             onChanged: (_) => notifier.togglePhotoSwipeHints(),
+          ),
+          const Divider(),
+          ListTile(
+            title: const Text('Support this project'),
+            subtitle: const Text('Buy me a coffee'),
+            leading: const Icon(Icons.favorite_outline),
+            trailing: const Icon(Icons.open_in_new, size: 18),
+            onTap: () => launchUrl(
+              Uri.parse('https://ko-fi.com/agentiphi'),
+              mode: LaunchMode.externalApplication,
+            ),
           ),
         ],
       ),
