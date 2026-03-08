@@ -61,6 +61,10 @@ lib/
 4. Generates quiz questions with four choices each
 5. Tracks per-species accuracy across sessions
 
+## Support
+
+If you find this app useful, you can [buy me a coffee](https://ko-fi.com/agentiphi).
+
 ## License
 
 This project is licensed under the [GNU General Public License v3.0](LICENSE).
